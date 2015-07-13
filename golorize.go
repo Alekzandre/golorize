@@ -54,7 +54,7 @@ type Golorize struct{}
 
 // Calculate the number of options must be in range 0-3
 
-func optionsSize(options []string) (int, error) {
+func OptionsSize(options []string) (int, error) {
 	if len(options) > 3 {
 		err := errors.New("Too many arguments.")
 		return 0, err
@@ -62,6 +62,6 @@ func optionsSize(options []string) (int, error) {
 	return len(options), nil
 }
 
-func newGolorize() *Golorize {
+func NewGolorize() *Golorize {
 	return &Golorize{}
 }

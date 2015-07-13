@@ -6,10 +6,10 @@ import (
 	"os"
 )
 
-func (g Golorize) color(s string, options ...string) {
+func (g Golorize) Color(s string, options ...string) {
 
 	var buffer bytes.Buffer
-	opNum, err := optionsSize(options)
+	opNum, err := OptionsSize(options)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
