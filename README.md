@@ -16,7 +16,10 @@ import (
 )
 
 func main() {
+	// init a new Golorize
 	gz := glz.NewGolorize()
+	// func (g Golorize) Color(s string, options ...string)
+	// Color("you text", io.Writer, police, 
 	gz.Color("basic on Stdout")
 	gz.Color("basic on Stderr", "2")
 	gz.Color("underlined", "1", glz.UNDERLINED)
