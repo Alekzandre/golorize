@@ -31,5 +31,5 @@ Choose between Stderr and Stdout.
 
 Improve the code.
 
-Makes it easier to use.
+Make it easier to use.
 
