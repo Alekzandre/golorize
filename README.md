@@ -1,4 +1,4 @@
-# golorize
+# Golorize
 *Golorize is a small package that makes your go experience more colorfull.*
 
 It's in [Google's Go](https://golang.org/) language to colorize your syntax.
