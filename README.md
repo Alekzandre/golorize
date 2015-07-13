@@ -24,7 +24,7 @@ func main() {
 	gz.Color("It makes errors more flashy", glz.BOLD, glz.F_RED, glz.B_BLUE)
 }
 ```
-![out_example01](/examples/examples01.png
+![out_example01](/examples/examples01.png)
 
 ####Features to come:
 Choose between Stderr and Stdout.
