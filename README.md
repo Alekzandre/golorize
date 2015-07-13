@@ -4,5 +4,6 @@
 It's in [Google's Go](https://golang.org/) language to colorize your syntax.
 
 To install the package make sure your $GOPATH is correctly set.
-
-__This will also be bold__
+```
+go get "github.com/Alekzandre/golorize"
+```
