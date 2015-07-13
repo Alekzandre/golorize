@@ -29,8 +29,6 @@ func main() {
 ![out_example01](/examples/example01.png)
 
 ####Features to come:
-Choose between Stderr and Stdout.
-
 Improve the code.
 
 Make it easier to use.
