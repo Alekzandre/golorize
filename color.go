@@ -21,31 +21,55 @@ func (g Golorize) Color(s string, options ...string) {
 		buffer.WriteString(LIMIT)
 		buffer.WriteString(s)
 		buffer.WriteString(END)
-		fmt.Println(buffer.String())
+		fmt.Fprintln(STREAM[1], buffer.String())
 	} else if opNum == 1 {
 		buffer.WriteString(START)
-		buffer.WriteString(string(options[0]))
+		buffer.WriteString(NORMAL)
 		buffer.WriteString(F_WHITE)
 		buffer.WriteString(LIMIT)
 		buffer.WriteString(s)
 		buffer.WriteString(END)
-		fmt.Println(buffer.String())
+		if options[0] == string(2) {
+			fmt.Fprintln(STREAM[2], buffer.String())
+		} else {
+			fmt.Fprintln(STREAM[1], buffer.String())
+		}
 	} else if opNum == 2 {
 		buffer.WriteString(START)
-		buffer.WriteString(string(options[0]))
-		buffer.WriteString(options[1])
+		buffer.WriteString(string(options[1]))
+		buffer.WriteString(F_WHITE)
 		buffer.WriteString(LIMIT)
 		buffer.WriteString(s)
 		buffer.WriteString(END)
-		fmt.Println(buffer.String())
-	} else {
+		if options[0] == string(2) {
+			fmt.Fprintln(STREAM[2], buffer.String())
+		} else {
+			fmt.Fprintln(STREAM[1], buffer.String())
+		}
+	} else if opNum == 3 {
 		buffer.WriteString(START)
-		buffer.WriteString(string(options[0]))
-		buffer.WriteString(options[1])
+		buffer.WriteString(string(options[1]))
 		buffer.WriteString(options[2])
 		buffer.WriteString(LIMIT)
 		buffer.WriteString(s)
 		buffer.WriteString(END)
-		fmt.Println(buffer.String())
+		if options[0] == string(2) {
+			fmt.Fprintln(STREAM[2], buffer.String())
+		} else {
+			fmt.Fprintln(STREAM[1], buffer.String())
+		}
+	} else {
+		buffer.WriteString(START)
+		buffer.WriteString(string(options[1]))
+		buffer.WriteString(options[2])
+		buffer.WriteString(options[3])
+		buffer.WriteString(LIMIT)
+		buffer.WriteString(s)
+		buffer.WriteString(END)
+		if options[0] == string(2) {
+			fmt.Fprintln(STREAM[2], buffer.String())
+		} else {
+			fmt.Fprintln(STREAM[1], buffer.String())
+		}
 	}
 }

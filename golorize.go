@@ -2,6 +2,8 @@ package golorize
 
 import (
 	"errors"
+	"io"
+	"os"
 )
 
 // Basic attributes
@@ -12,9 +14,9 @@ const (
 	LIMIT = "m"
 )
 
-// Basic streams (default: Stdout)
-
 // Basic options
+
+var STREAM = []io.Writer{os.Stdin, os.Stdout, os.Stderr}
 
 const (
 	NORMAL     = "0;"
@@ -55,7 +57,7 @@ type Golorize struct{}
 // Calculate the number of options must be in range 0-3
 
 func OptionsSize(options []string) (int, error) {
-	if len(options) > 3 {
+	if len(options) > 4 {
 		err := errors.New("Too many arguments.")
 		return 0, err
 	}

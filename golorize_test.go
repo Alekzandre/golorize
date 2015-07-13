@@ -9,6 +9,7 @@ var test2 = []string{"first"}
 var test3 = []string{"first", "second"}
 var test4 = []string{"first", "second", "third"}
 var test5 = []string{"first", "second", "third", "fourth"}
+var test6 = []string{"first", "second", "third", "fourth", "fifth"}
 
 func TestOptionSize(t *testing.T) {
 	res1, err1 := OptionsSize(test1)
@@ -28,7 +29,11 @@ func TestOptionSize(t *testing.T) {
 		t.Error("expected res = 3 et err == nil")
 	}
 	res5, err5 := OptionsSize(test5)
-	if res5 != 0 && err5 == nil {
+	if res5 != 4 && err5 != nil {
+		t.Error("expected res = 4 et err == nil")
+	}
+	res6, err6 := OptionsSize(test6)
+	if res6 != 0 && err6 == nil {
 		t.Error("expected res = 0 et err != nil")
 	}
 }
