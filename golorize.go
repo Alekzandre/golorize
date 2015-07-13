@@ -14,9 +14,11 @@ const (
 	LIMIT = "m"
 )
 
-// Basic options
+// Basic Streams
 
 var STREAM = []io.Writer{os.Stdin, os.Stdout, os.Stderr}
+
+// Basic options
 
 const (
 	NORMAL     = "0;"
@@ -54,7 +56,7 @@ const (
 
 type Golorize struct{}
 
-// Calculate the number of options must be in range 0-3
+// Calculate the number of options must be in range 0-4
 
 func OptionsSize(options []string) (int, error) {
 	if len(options) > 4 {
